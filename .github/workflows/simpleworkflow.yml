@@ -1,7 +1,8 @@
 name: 02-01-Simple Workflow
 on: workflow_dispatch
+env: test
 jobs: 
   my-first-job:
     runs-on: self-hosted
     steps:
-      - run: echo $GITHUB_WORKSPACE
+      - run: echo {{$test,VARIABLE}}
