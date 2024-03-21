@@ -1,4 +1,4 @@
-name: 02-01-Simple Workflow
+name: simpleworkflow
 on: 
   workflow_dispatch:
     inputs:
@@ -9,4 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: setup java
-        uses: actions/
+        run: echo ${{vars.VARIABLE}}
+
